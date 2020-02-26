@@ -1,0 +1,70 @@
+@import "./variables/colors.scss";
+@import "./variables/mixins.scss";
+
+.main-register-container {
+  background-color: $colorWhite;
+  height: 107vh;
+  h3 {
+    margin: 0;
+    padding-top: 25px;
+    @include h3-v2;
+    color: $colorBlue;
+  }
+  p {
+    @include p-v2;
+    color: $colorGrey;
+    margin-top: 36px;
+  }
+  input {
+    @include input-v1;
+    border-color: $colorGrey;
+    margin-bottom: 21px;
+  }
+  button {
+    @include button-v1;
+    margin-top: 12px;
+    &:hover {
+      background-color: black;
+      cursor: pointer;
+    }
+  }
+  &__link {
+    button {
+      margin-top: 22px;
+      @include button-v2;
+      color: black;
+      background-color: white;
+      border-color: $colorGrey;
+      margin-right: 23px;
+    }
+  }
+}
+
+.warn {
+  color: red;
+  display: flex;
+  position: relative;
+  bottom: 20px;
+  display: none;
+}
+
+#facebook {
+  &:hover {
+    background-color: blue;
+    color: white;
+  }
+}
+
+#googlePlus {
+  &:hover {
+    background-color: red;
+    color: white;
+  }
+}
+
+#linkedIn {
+  &:hover {
+    background-color: blue;
+    color: white;
+  }
+}

@@ -1,0 +1,82 @@
+@import "./variables/colors.scss";
+@import "./variables/mixins.scss";
+
+.register-container {
+  text-align: center;
+  background-color: $colorBlue;
+  height: 107vh;
+  h3 {
+    @include h3-v1;
+    color: $colorWhite;
+    margin-top: 26vh;
+    margin-bottom: 40px;
+  }
+  p {
+    @include p-v1;
+    color: $colorWhite;
+    margin-bottom: 10px;
+  }
+  button {
+    @include button-v1;
+    border-color: $colorLightBlue;
+    background-color: $colorBlue;
+    color: $colorWhite;
+    margin-top: 50px;
+    &:hover {
+      background-color: black;
+      cursor: pointer;
+    }
+  }
+}
+
+.register-greeting {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+  &-show {
+    visibility: visible;
+    opacity: 1;
+    transition: 0s;
+  }
+}
+
+.login-greeting {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  p, h3{
+    margin-left: 20px;
+    opacity: 1;
+    transition: 0s;
+  }
+  button {
+    margin-left: 16px;
+    margin-top: 8.5vh;
+  }
+  &-hidden {
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    p, h3{
+      margin-left: 20px;
+      opacity: 1;
+      transition: 0s;
+    }
+    button {
+      margin-left: 16px;
+      margin-top: 8.5vh;
+    }
+  }
+}
+
+.login-tab {
+  display: none;
+}
+
+.register-tab {
+  display: block;
+}
+
+.checkbox-button {
+  @include checkbox-v1;
+}

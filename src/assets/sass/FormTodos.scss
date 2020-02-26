@@ -1,0 +1,47 @@
+@import './variables/colors.scss';
+@import './variables/mixins.scss';
+
+.form-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  &__box {
+    position: relative;
+    background-color: $colorWhite;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 50%;
+    height: 68vh;
+    padding: 20px;
+    text-align: center;
+    img {
+      @include img-v2;
+    }
+    form {
+      input {
+        @include input-v2;
+        display: block;
+        margin: 15px auto;
+      }
+      textarea {
+        @include textarea-v1;
+      }
+      button {
+        @include button-v1;
+      }
+    }
+  }
+}
+
+#showThis {
+  display: none;
+}
+
+#profile-setting {
+  margin-top: 20vh;
+  margin-left: 17vw;
+}

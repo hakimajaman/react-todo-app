@@ -1,0 +1,108 @@
+@import "./variables/colors.scss";
+@import "./variables/mixins.scss";
+
+.todos-container {
+  background-color: $colorGreyBackground;
+  height: 107vh;
+}
+
+#but {
+  width: 98%;
+  height: 10vh;
+  font-size: 18px;
+}
+
+.todos-controller {
+  display: flex;
+  flex-direction: column;
+  input {
+    border: 0;
+    border-bottom: 3px solid black;
+    margin-bottom: 25px;
+    font-size: 30px;
+    margin-top: 20vh;
+    width: 80%;
+  }
+  button {
+    @include button-v3;
+    border-color: black;
+    //margin-left: 8vw;
+    //margin-top: 23vh;
+    margin-bottom: 25px;
+    &:hover {
+      background-color: gold;
+      cursor: pointer;
+    }
+  }
+  select {
+    @include select-v1;
+  }
+  &__quick {
+    button {
+      @include button-v7;
+      &:hover {
+        background-color: red;
+        cursor: pointer;
+    }
+    }
+  }
+}
+
+.box-todos {
+  display: flex;
+  p {
+    @include p-v3;
+    margin-right: 22vw;
+    margin-left: 42px;
+  }
+  &__list {
+    background-color: $colorWhite;
+    border: 1px solid $colorGrey;
+    border-radius: 5px;
+    height: 7vh;
+    width: 71%;
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+    button {
+      @include button-v4;
+      background-color: $colorWhite;
+      border-color: transparent;
+      text-align: left;
+
+    }
+    img {
+      @include img-v1;
+      margin-left: 5px;
+    }
+  }
+  &__edit {
+    background-color: $colorWhite;
+    border: 1px solid $colorGrey;
+    border-radius: 3px;
+    display: none;
+    flex-direction: column;
+    textarea {
+      width: 42vw;
+      height: 100px;
+      margin: 5px 5px 5px 8px;
+      border-radius: 5px;
+    }
+  }
+}
+
+#margin-check {
+  margin-right: 5px;
+}
+
+#margin-important {
+  margin-right: 50px;
+}
+
+#margin-edit {
+  margin-right: 15px;
+}
+
+#my-day {
+  display: block;
+}

@@ -1,0 +1,17 @@
+@import "./variables/colors.scss";
+@import "./variables/mixins.scss";
+
+.header-container {
+  background-color: $colorBlue;
+  display: flex;
+  padding-bottom: 20px;
+  p {
+    color: $colorWhite;
+    margin-right: 50vw;
+  }
+  a {
+    @include link-v1;
+    color: $colorWhite;
+    margin-top: 16px;
+  }
+}
